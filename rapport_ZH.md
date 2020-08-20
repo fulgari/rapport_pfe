@@ -66,7 +66,7 @@ Dans la partie front, on utilise Angular, le framework front-end de Google, pour
 
 Le logiciel Git est utilisé pour la synchronisation de projet avec le dépôt Git distant. Le front et le back sont connectés avec la structure JSON. Docker et docker-compose sont utilisés pour le déploiement de nos logiciels front et back à une machine Linux.
 
-
+实习的第二个项目是将一个电信收费的分布式系统改造成为一个分布式的电动车的充电电桩的大数据管理方案。整体系统由一系列的微服务所组成，包括归一化文件、整合用户数据以及收集的数据、将整合的数据发布到Kafka分布式消息队列中以及在Vue框架构建的网页页面中获取相应的数据及进行对应的操作。
 
 <div style="page-break-after: always;"></div>
 ## 1. Introduction

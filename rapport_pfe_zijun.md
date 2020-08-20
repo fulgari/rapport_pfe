@@ -83,7 +83,9 @@ Dans la partie back, on utilise MongoDB, une base de données distribuée, unive
 
 Dans la partie front, on utilise Angular, le framework front-end de Google, pour construire un site web structuré et évolutif. Typescript(un sur-ensemble de Javascript), CSS et HTML sont à la base de la construction d'un composant Angular. Angular Material, une bibliothèque de components UI, est utilisée pour améliorer l'interface utilisateur.
 
-Le logiciel Git est utilisé pour la synchronisation de projet avec le dépôt Git distant. Le front et le back sont connectés avec la structure JSON. Docker et docker-compose sont utilisés pour le déploiement de nos logiciels front et back à une machine Linux.
+Le deuxième projet du stage consiste à transformer un système de recharge de télécommunications distribué en une solution de gestion de big data distribuée pour les piles de recharge de véhicules électriques On intègre les données des utilisateurs et les données collectées, et publie les données intégrées sur Kafka.
+
+Le logiciel Git est utilisé pour la synchronisation de projet avec le dépôt Git distant. Lse fronts et les backs sont connectés avec la structure JSON. Docker et docker-compose sont utilisés pour le déploiement de nos logiciels microservices à une machine Linux.
 
 
 

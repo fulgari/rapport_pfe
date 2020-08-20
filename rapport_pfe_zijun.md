@@ -485,7 +485,15 @@ Tout comme ce que nous avons fait dans le projet ETL, nous pouvons diviser le pr
 
 ### Consolidation
 
-mapper tous les données normalisées avec le serveur sql qui s'occupe des utilisateurs
+Cette étape est à mapper tous les données normalisées avec le SQL Server qui s'occupe des utilisateurs.
+
+Nous devons également générer des données utilisateur virtuelles pour les tests.
+
+![image-20200820182425501](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\data_gen_sqlserver.png)
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données liées aux utilisateurs dans SQL Server</div></center>
+
+On peut voir dans la figure ci-dessous que nos données consolidées ont été affichées avec succès dans Cassandra.
 
 ![image-20200820163801538](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\consolidated.png)
 

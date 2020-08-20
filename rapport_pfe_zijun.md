@@ -120,7 +120,7 @@ Spikeelabs est immatriculée en 2016. C’est une entreprise ESN basée à Renne
 
 
 
-<img src="./logo.jpg" width = "30%" alt="SpikeeLabs "/>
+<img src="logo.jpg" width = "30%" alt="SpikeeLabs "/>
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le logo de SpikeeLabs</div></center>
 
@@ -208,7 +208,7 @@ Plus d'informations sur Flask peuvent être trouvées ici : https://palletsproje
 
 Afin de rendre l'intégration des données plus facile et plus rapide, nous utilisons MongoDB comme base de données pour développer des documents de type JSON avec des schémas dynamiques.
 
-<img src="https://cdn.ttgtmedia.com/visuals/LeMagIT/hero_article/MongoDB.jpg" alt="MongoDB se met aux graphes" style="height:60px;" />
+<img src="MongoDB.jpg" alt="MongoDB se met aux graphes" style="height:60px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Logo de MongoDB</div></center>
 
@@ -220,7 +220,7 @@ SQL Server est un système de gestion de base de données (SGBD) en langage SQL 
 
 Nous utilisons une base de données SQL Server pour stocker les informations relatives au compte.
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\sqlserver.png" alt="image-20200820122854800" style="height:60px;" />
+<img src="sqlserver.png" alt="image-20200820122854800" style="height:60px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Logo de SQL Server</div></center>
 
@@ -232,7 +232,7 @@ Cassandra est un SGBD de type NoSQL conçu pour gérer des quantités massives d
 
 Dans notre projet IoT, nous l'utilisons pour stocker les données EDR (Event Detail Record).
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\cassandra.png" alt="image-20200820123013611" style="height:60px;" />
+<img src="cassandra.png" alt="image-20200820123013611" style="height:60px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Logo de Cassandra</div></center>
 
@@ -254,7 +254,7 @@ Kafka peut fournir un mécanisme de file d'attente de messages pour améliorer l
 
 Pour transmettre les données de log au réseau distribué Kafka afin de garantir la fiabilité, nous utilisons lensio/fast-data-dev, une configuration Kafka à part entière.
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\kafka.png" alt="image-20200820123220700" style="height:60px;" />
+<img src="kafka.png" alt="image-20200820123220700" style="height:60px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Logo de Kafka</div></center>
 
@@ -266,7 +266,7 @@ Docker is a tool designed to make it easier to create, deploy, and run applicati
 
 Afin d'implémenter le déploiement de microservices pour ces deux projets, nous avons utilisé Docker dans le serveur pour déployer les microservices dans le conteneur Docker.
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\docker.png" alt="image-20200820121201404" style="height:70px;" />
+<img src="docker.png" alt="image-20200820121201404" style="height:70px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Logo de Docker</div></center>
 
@@ -324,7 +324,7 @@ OneDrive est un service d'hébergement de fichiers qui permet aux utilisateurs d
 
 ETL, l'abréviation de Extract-Transform-Load en anglais, est utilisé pour décrire le processus d'extraction, de transformation et de chargement de données de la source à la destination. Le terme ETL est plus couramment utilisé dans le stockage de données, mais son objet ne se limite pas au stockage de données.
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\etl-and-elt-gray.png" alt="ETL and ELT" style="zoom: 80%;" />
+<img src="etl-and-elt-gray.png" alt="ETL and ELT" style="zoom: 80%;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les principes de modèle ETL</div></center>
 
@@ -358,13 +358,13 @@ Nous pouvons voir qu'il existe de nombreux workflows ci-dessus, ce sont les donn
 
 Selon cet organigramme, nous pouvons obtenir la relation entre différents flux de transmission. Nous résumons l'organigramme et obtenons le flux de commandes suivant.
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\organigram2.png" alt="image-20200820162233151" style="zoom:80%;" />
+<img src="organigram2.png" alt="image-20200820162233151" style="zoom:80%;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les flux dans le système ETL</div></center>
 
 Nous pouvons diviser ces flux en quatre catégories, à savoir `Catalogue`, `Commande`, `Retours` et `Synchro`.
 
-![image-20200820162816611](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\4flux.png)
+![image-20200820162816611](4flux.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les quatre catégories de flux dans l'Angular </div></center>
 
@@ -381,13 +381,13 @@ Dans cette partie, nous avons terminé l'opération de génération de données 
 
 Le serveur principal de notre projet utilise le framework Flask et Swagger pour construire ce service. Notre ancien projet est un système typique de gestion de l'information logistique des télécommunications, donc notre travail consiste à modifier l'ancien projet pour l'adapter à notre nouveau type de données et système de type de service.
 
-![image-20200820153124391](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\etl_ori_API.png)
+![image-20200820153124391](etl_ori_API.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'API du système d'origine</div></center>
 
 Nous avons défini un nouveau type de données pour notre projet et défini une nouvelle API basée sur l'API d'origine. Il comprend les opérations suivantes.
 
-![image-20200820152041422](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\etl_API.png)
+![image-20200820152041422](etl_API.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">La conception d'API pour ETL</div></center>
 
@@ -412,13 +412,13 @@ Ici en ci-dessous on présente les filtres qu'on a créés. Selon différents be
 
 Le test d'une page peut être effectué. On précise que la référence de la commande commence par "IAS" et la commande passe de "boutique" à "ERP" (insensible à la casse). La date de la commande est fixée au 13/03/2019.
 
-![Filtre_chercher2](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\Filtre_chercher2.png)
+![Filtre_chercher2](Filtre_chercher2.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les commandes filtrées</div></center>
 
 De plus, lorsque nous cliquons sur une page, celle-ci doit pouvoir afficher les informations détaillées de la commande et toutes les commandes qui y sont liées dans le même workflow.  Ces commandes forment le timeline.
 
-![Annotation 2020-07-02 183127](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\timeline.png)
+![Annotation 2020-07-02 183127](timeline.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le timeline est affiché dans la page détail</div></center>
 
@@ -477,7 +477,7 @@ Après avoir terminé la conception front-end et back-end, notre projet peut s'e
 
 Dans notre projet IoT, nous commencerons par l'étape uS Collecte (nous utilisons les données générées à la place) .Les données entrantes dans différents formats seront intégrées en normaliastion dans un format unifié et stockées dans Cassandra. 
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\IOT_arch.png" alt="image-20200820164412931"  />
+<img src="IOT_arch.png" alt="image-20200820164412931"  />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le processus global du projet</div></center>
 
@@ -487,7 +487,7 @@ Enfin, nous sortons les données de la file d'attente de messages Kafka, effectu
 
 <div style="page-break-after: always;"></div>
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\Hierachie_IOT.png" alt="image-20200819182419193"  />
+<img src="Hierachie_IOT.png" alt="image-20200819182419193"  />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les tâches détaillées de projet IOT</div></center>
 
@@ -503,7 +503,7 @@ Tout comme ce que nous avons fait dans le projet ETL, nous pouvons diviser le pr
 
 Voici comment la même donnée est représentée dans trois formats différents.
 
-![image-20200820234922018](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\3donnees.png)
+![image-20200820234922018](3donnees.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les trois formats de données : CSV, JSON, XML</div></center>
 
@@ -511,7 +511,7 @@ Comme données de simulation, nous avons utilisé "On-street Car Parking Sensor 
 
 Les données normalisées stockées dans la base de données Cassandra après normalisation sont les suivantes.
 
-![image-20200820163649139](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\normalisation.png)
+![image-20200820163649139](normalisation.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données normalisées sont stockées dans Cassandra</div></center>
 
@@ -523,15 +523,15 @@ Cette étape est à mapper tous les données normalisées avec le SQL Server qui
 
 Nous devons également générer des données utilisateur virtuelles pour les tests.
 
-![image-20200820182425501](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\data_gen_sqlserver.png)
+![image-20200820182425501](data_gen_sqlserver.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données liées aux utilisateurs dans SQL Server</div></center>
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\sql_account.png" alt="sql_account" style="zoom:75%;" />
+<img src="sql_account.png" alt="sql_account" style="zoom:75%;" />
 
 On peut voir dans la figure ci-dessous que nos données consolidées ont été affichées avec succès dans Cassandra.
 
-![image-20200820163801538](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\consolidated.png)
+![image-20200820163801538](consolidated.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données consolidées sont stockées dans Cassandra</div></center>
 
@@ -554,7 +554,7 @@ def configure(component_name, component_instance_id=None, is_threaded=False, req
 
 Grâce à fast-data-dev, nous pouvons facilement obtenir une interface utilisateur sur `http://localhost:3030`.
 
-![image-20200820163953277](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\iot_kafka.png)
+![image-20200820163953277](iot_kafka.png)
 
 <div style="page-break-after: always;"></div>
 
@@ -562,11 +562,11 @@ Grâce à fast-data-dev, nous pouvons facilement obtenir une interface utilisate
 
 afficher un API pour faciliter les opérations
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\dashboard.png" alt="dashboard" style="zoom:80%;" />
+<img src="dashboard.png" alt="dashboard" style="zoom:80%;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'interface Homme-Machine de projet IoT pour faire des demandes vers serveur</div></center>
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\IHM_FraudDetection.png" alt="IHM_FraudDetection" style="zoom:80%;" />
+<img src="IHM_FraudDetection.png" alt="IHM_FraudDetection" style="zoom:80%;" />
 
 <div style="page-break-after: always;"></div>
 

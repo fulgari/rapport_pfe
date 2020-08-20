@@ -322,11 +322,25 @@ OneDrive est un service d'hébergement de fichiers qui permet aux utilisateurs d
 
 ### Organisation
 
-Nous divisons le projet ETL en les parties suivantes pour organiser l'exécution des tâches, afin de faciliter la compréhension et la gestion de l'ensemble de notre projet.![image-20200819154240304](Hierachie_ETL.png)
+ETL, l'abréviation de Extract-Transform-Load en anglais, est utilisé pour décrire le processus d'extraction, de transformation et de chargement de données de la source à la destination. Le terme ETL est plus couramment utilisé dans le stockage de données, mais son objet ne se limite pas au stockage de données.
+
+<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\etl-and-elt-gray.png" alt="ETL and ELT" style="zoom: 80%;" />
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les principes de modèle ETL</div></center>
+
+Dans notre projet, nous utilisons le modèle ETL pour nous aider à développer et intégrer front-end et back-end.
+
+
+
+<div style="page-break-after: always;"></div>
+
+Nous divisons le projet ETL en les parties suivantes pour organiser l'exécution des tâches, afin de faciliter la compréhension et la gestion de l'ensemble de notre projet.
+
+<img src="Hierachie_ETL.png" alt="image-20200819154240304" style="zoom:80%;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les tâches détaillées de projet ETL</div></center>
 
-Nous divisons le développement de chaque étape en deux étapes d'apprentissage et de codage, et subdivisons les tâches spécifiques de cette étape.
+Le développement de chaque étape est divisé en deux étapes : l'pprentissage et le codage.
 
 <div style="page-break-after: always;"></div>
 
@@ -354,7 +368,7 @@ Nous pouvons diviser ces flux en quatre catégories, à savoir `Catalogue`, `Com
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les quatre catégories de flux dans l'Angular </div></center>
 
-Dans cette partie, nous avons terminé l'opération de génération de données de simulation. Nous avons spécifiquement utilisé Python comme langage pour générer des scripts et nous nous sommes connectés à la base de données MongoDB pour implémenter l'insertion de documents. De plus, nous utilisons également JSON comme type de données pour réaliser une communication sans état entre les API.
+Dans cette partie, nous avons terminé l'opération de génération de données de simulation. Nous avons spécifiquement utilisé Python comme langage pour générer des scripts et nous nous sommes connectés à la base de données MongoDB pour implémenter l'insertion de documents. Nous utilisons également JSON comme type de données pour réaliser une communication sans état entre les API.
 
 
 
@@ -386,29 +400,33 @@ Sur la base du routeur défini ci-dessus, nous pourrons construire le fichier `s
 <div style="page-break-after: always;"></div>
 ### Angular pour l'Interface Homme-Machine
 
-Nous avons utilisé Angular comme framework frontal. Angular est un framework côté client open source de Google, basé sur TypeScript. 
+Angular est un framework côté client open source de Google, basé sur TypeScript. Nous avons également utilisé son interface utilisateur, Angular Material, pour développer une page front texturée. 
 
-Nous utilisons Angular pour faire beaucoup de conception fonctionnelle. Par exemple, nous pouvons ajouter une zone de recherche pour filtrer les résultats EAN, ou nous pouvons ajouter des informations supplémentaires sur le timeline.
+Angular est utilisé pour faire beaucoup de conception fonctionnelle. Par exemple, nous pouvons ajouter une zone de recherche pour filtrer les résultats EAN, ou nous pouvons ajouter des informations supplémentaires sur le timeline.
 
-Ici en ci-dessous nous présente les filtres qu'on a créés.
+Ici en ci-dessous on présente les filtres qu'on a créés. Selon différents besoins, on peut filtrer la référence de la commande, la référence de la boutique, le code barre EAN, la date de la commande, la date d'intégration de la commande, le nom du fichier, la source de la commande, la destination de la commande, la catégorie de la commande et la version de protocole.
 
 ![image-20200630102842875](Filters.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les filtres pour filtrer les commandes</div></center>
 
+Le test d'une page peut être effectué. On précise que la référence de la commande commence par "IAS" et la commande passe de "boutique" à "ERP" (insensible à la casse). La date de la commande est fixée au 13/03/2019.
 
+![Filtre_chercher2](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\Filtre_chercher2.png)
 
-La page détail pour une commande particulière.
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les commandes filtrées</div></center>
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\order_list_timeline.png" alt="order_list_timeline"  />
+De plus, lorsque nous cliquons sur une page, celle-ci doit pouvoir afficher les informations détaillées de la commande et toutes les commandes qui y sont liées dans le même workflow.  Ces commandes forment le timeline.
+
+![Annotation 2020-07-02 183127](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\timeline.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le timeline est affiché dans la page détail</div></center>
 
 
 
-De plus, nous avons également marqué des commandes érronnée.
+Lors de la génération de données, nous avons également généré certains types de données qui indiquent des erreurs pour identifier les problèmes pouvant survenir pendant le processus de commande, tels que des erreurs d'inventaire, des erreurs de transaction ou des erreurs de format.
 
-![image-20200630103904108](order_list_timeline_detail.png)
+<img src="order_list_timeline_error.png" alt="order_list_timeline_error" style="" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Une commande erronée</div></center>
 
@@ -441,7 +459,7 @@ Ce qui suit est le résultat de notre test unitaire, ce qui signifie que notre p
 <div style="page-break-after: always;"></div>
 ### Déploiement en Docker
 
-Après avoir terminé la conception front-end et back-end, notre projet peut s'exécuter normalement sur le serveur. Mais si nous voulons déployer le projet afin que le projet puisse toujours fournir des services et être plus facilement accessible, nous devons utiliser Docker.
+Après avoir terminé la conception front-end et back-end, notre projet peut s'exécuter normalement en local de VM. Mais si nous voulons déployer le projet afin que le projet puisse toujours fournir des services et être plus facilement accessible, nous devons utiliser Docker.
 
 ![image-20200630102653449](deploydocker1.png)
 
@@ -457,17 +475,23 @@ Après avoir terminé la conception front-end et back-end, notre projet peut s'e
 
 ### Organisation
 
-<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\IOT_arch.png" alt="image-20200820164412931" style="zoom: 67%;" />
+Dans notre projet IoT, nous commencerons par l'étape uS Collecte (nous utilisons les données générées à la place) .Les données entrantes dans différents formats seront intégrées en normaliastion dans un format unifié et stockées dans Cassandra. 
+
+<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\IOT_arch.png" alt="image-20200820164412931"  />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le processus global du projet</div></center>
 
-Tout comme ce que nous avons fait dans le projet ETL, nous pouvons diviser le projet IoT en quelques petites tâches.
+Ensuite, nous faisons correspondre les données normalisées dans Cassandra avec les données utilisateur stockées dans SQL Server, et sortons les données qui répondent aux conditions utilisateur dans le lac de données de Kafka.
 
-![image-20200819182419193](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\Hierachie_IOT.png)
+Enfin, nous sortons les données de la file d'attente de messages Kafka, effectuons certains traitements de Big Data et les affichons sur le dashboard.
+
+<div style="page-break-after: always;"></div>
+
+<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\Hierachie_IOT.png" alt="image-20200819182419193"  />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les tâches détaillées de projet IOT</div></center>
 
-
+Tout comme ce que nous avons fait dans le projet ETL, nous pouvons diviser le projet IoT en quelques petites tâches.
 
 
 
@@ -475,7 +499,17 @@ Tout comme ce que nous avons fait dans le projet ETL, nous pouvons diviser le pr
 
 ### Normalisation
 
-À l'étape Normalisation, ce que nous devons faire est de traiter les données brutes collectées, afin que nous puissions obtenir les données de trois formats de fichiers différents (JSON, CSV et XML), et les normaliser pour obtenir un format unifié Les données sont transférées à l'étape suivante.
+À l'étape Normalisation, ce que nous devons faire est de traiter les données brutes collectées, afin que nous puissions obtenir les données de trois formats de fichiers différents (JSON, CSV et XML) à un format unifié. Les données normalisées sont transférées à l'étape suivante, la consolidation.
+
+Voici comment la même donnée est représentée dans trois formats différents.
+
+![image-20200820234922018](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\3donnees.png)
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les trois formats de données : CSV, JSON, XML</div></center>
+
+Comme données de simulation, nous avons utilisé "On-street Car Parking Sensor Data-2017", les données de détection des places de stationnement de la ville de Melbourne dans la zone CBD en 2017. Il enregistre l'ID du capteur, l'heure d'arrivée de la voiture, l'heure de départ de la voiture, la durée du séjour, les panneaux de signalisation, l'emplacement géographique et d'autres données.
+
+Les données normalisées stockées dans la base de données Cassandra après normalisation sont les suivantes.
 
 ![image-20200820163649139](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\normalisation.png)
 
@@ -493,6 +527,8 @@ Nous devons également générer des données utilisateur virtuelles pour les te
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données liées aux utilisateurs dans SQL Server</div></center>
 
+<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\sql_account.png" alt="sql_account" style="zoom:75%;" />
+
 On peut voir dans la figure ci-dessous que nos données consolidées ont été affichées avec succès dans Cassandra.
 
 ![image-20200820163801538](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\consolidated.png)
@@ -503,7 +539,20 @@ On peut voir dans la figure ci-dessous que nos données consolidées ont été a
 
 ### Kafka
 
-écouteur pour capturer les données
+```python 
+def configure(component_name, component_instance_id=None, is_threaded=False, requestid_formatter=None):
+    # ... code ... #
+	mylogger = logging.getLogger()
+    kh = KafkaHandler()  
+	formatter = CustomJsonFormatter('(@timestamp) (levelname) (component_name) (inst_id) (name) (message)')
+	kh.setFormatter(formatter)
+	mylogger.addHandler(kh)
+    # ... code ... #
+```
+
+
+
+Grâce à fast-data-dev, nous pouvons facilement obtenir une interface utilisateur sur `http://localhost:3030`.
 
 ![image-20200820163953277](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\iot_kafka.png)
 
@@ -513,9 +562,11 @@ On peut voir dans la figure ci-dessous que nos données consolidées ont été a
 
 afficher un API pour faciliter les opérations
 
-![dashboard](C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\dashboard.png)
+<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\dashboard.png" alt="dashboard" style="zoom:80%;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'interface Homme-Machine de projet IoT pour faire des demandes vers serveur</div></center>
+
+<img src="C:\Users\Utilisateur\OneDrive - SpikeeLabs SAS\stage\rapport\IHM_FraudDetection.png" alt="IHM_FraudDetection" style="zoom:80%;" />
 
 <div style="page-break-after: always;"></div>
 
@@ -536,3 +587,16 @@ Grâce à ce projet, j'ai maîtrisé de nombreuses technologies et outils de dé
 
 
 Tous ces éléments ont apporté un soutien conceptuel plus riche à la gestion de mon projet de fin d'études mené en 5ème année d’Électronique et Technologies Numériques.
+
+<div style="page-break-after: always;"></div>
+
+## Références
+
+- Fernando Monteiro – Learning Single-page Web Application Development
+- Angular docs : https://angular.io/docs
+- Le Guide Angular par Marmicode : https://guide-angular.wishtack.io/
+- MongoDB documentation : https://docs.mongodb.com/manual/
+- lensesio/fast-data-dev : https://github.com/lensesio/fast-data-dev
+- lensesio/kafka-cheat-sheet : https://github.com/lensesio/kafka-cheat-sheet
+- Docker docs : https://docs.docker.com/get-docker/
+- On-street Car Parking Sensor Data - 2017 : https://data.melbourne.vic.gov.au/Transport/On-street-Car-Parking-Sensor-Data-2017/u9sa-j86i

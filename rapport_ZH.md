@@ -146,6 +146,8 @@ Nous utilisons Angular pour faire beaucoup de conception fonctionnelle. Par exem
 
 Ici en ci-dessous nous présente les filtres qu'on a créés.
 
+根据需求的不同，我们能够对命令的引用、小店的引用、条形码、命令的日期、命令的整合日期、文件命、命令的来源地、命令的目的地、命令所属的类别以及协议的版本号来进行过滤。
+
 ![image-20200630102842875](C:\Users\Utilisateur\AppData\Roaming\Typora\typora-user-images\image-20200630102842875.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les filtres pour filtrer les commandes</div></center>
@@ -189,13 +191,16 @@ Après avoir terminé la conception front-end et back-end, notre projet peut s'e
 
 ## 3. Projet IoT
 
-Architecture
 
-IoT项目的结构能够
+
+在我们的IoT项目中，我们将从uS Collecte这一步开始（我们使用的生成的数据代替），传入的不同格式的数据将被在normaliastion中整合成统一的格式存放在Cassandra中。接着我们将Cassandra中的归一化数据与存放在SQL Server中的用户数据做匹配，输出满足用户条件的数据给Kafka这个数据湖。
+最后我们从kafka消息队列中取出数据，进行一定的大数据处理并显示在dashboard上。
 
 ### 3.1 Normalisation
 
 normaliser les données
+
+作为模拟数据，我们采用了“On-street Car Parking Sensor Data - 2017”这个墨尔本城在2017年对CBD区域的停车实地检测数据。它记录了传感器的ID、汽车到达时间、汽车离开时间、停留持续时间、路标、地理位置等数据。
 
 <div style="page-break-after: always;"></div>
 

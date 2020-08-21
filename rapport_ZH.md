@@ -258,3 +258,9 @@ Déployer le projet en docker
 ## 4. Conclusion
 
 Grâce à ce projet, j'ai maîtrisé de nombreuses technologies et outils de développement front-end et back-end avec des scénarios d'application pratiques, tels que Git et Docker. Et ce projet de recherche a été fait par moi-même, et cela m'a aussi permis d'apprendre à gérer le projet et à être responsable de mon propre projet.
+
+
+
+回想我们最初的目标，on可以说on已经基本完成了实习中的这两个项目。在我的企业导师的指导下，M.Le Fellic，我一步一步地完成了这两个项目。
+但是还有很多事情需要去思考和提高的。
+比如对于第二个项目中，除了我们做的之外，使用更加具体和更加的队列设计是推荐的。我因此建议on可以使用ELK+Kafka的配合来实现日志收集系统集群。

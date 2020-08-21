@@ -21,7 +21,7 @@
 
 <div style="border-top: 3px ridge #fff"></div>
 
-<div style="margin:1em 3em;font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.2em;"><strong>R&D démonstrateur web</strong> : Conception et développement d’un démonstrateur web d'un flux de travail boutique-logistique-entrepôt et de système IoT</div>
+<div style="margin:1em 2.5em;font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.2em;"><strong>R&D démonstrateur web</strong> : Conception et développement d’un démonstrateur web d'un flux de travail boutique-logistique-entrepôt et de système IoT</div>
 
 <br>
 
@@ -700,11 +700,11 @@ Nous pouvons faire des demandes de big data sur la page et obtenir des analyses 
 
 ## Conclusion
 
-Grâce à ce projet, j'ai maîtrisé de nombreuses technologies et outils de développement front-end et back-end avec des scénarios d'application pratiques, tels que Git et Docker. Et ce projet de recherche a été fait par moi-même, et cela m'a aussi permis d'apprendre à gérer le projet et à être responsable de mon propre projet.
+Rappelant notre objectif initial, on peut dire que on a pratiquement terminé les deux projets du stage. Sous la direction de mon mentor d'entreprise, M. Le Fellic, j'ai réalisé ces deux projets étape par étape.
 
+Mais il reste encore beaucoup de choses à considérer et à améliorer.
 
-
-Tous ces éléments ont apporté un soutien conceptuel plus riche à la gestion de mon projet de fin d'études mené en 5ème année d’Électronique et Technologies Numériques.
+Par exemple, pour le deuxième projet, en plus de ce que on a fait, il est recommandé d'utiliser une conception de file d'attente plus spécifique et plus robuste. Je suggère donc que l'on puisse utiliser la coopération d'ELK + Kafka pour mettre en œuvre un cluster de système de collecte de log.
 
 <div style="page-break-after: always;"></div>
 

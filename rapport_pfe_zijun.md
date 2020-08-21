@@ -196,6 +196,8 @@ Afin de faciliter la réalisation des fonctionalités de l'API, nous utilisons l
 
 Plus d'informations sur Swagger peuvent être trouvées ici : https://swagger.io/ .
 
+<div style="page-break-after: always;"></div>
+
 #### Flask
 
 Flask est un framework d'application web WSGI (Web Server Gateway Interface) léger. Il est conçu pour rendre la mise en route rapide et facile, avec la possibilité de s'adapter à des applications complexes.
@@ -237,6 +239,8 @@ Dans notre projet IoT, nous l'utilisons pour stocker les données EDR (Event Det
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Logo de Cassandra</div></center>
 
 Plus d'informations sur Cassandra peuvent être trouvées ici : https://cassandra.apache.org/
+
+<div style="page-break-after: always;"></div>
 
 #### RabbitMQ
 
@@ -330,7 +334,9 @@ ETL, l'abréviation de Extract-Transform-Load en anglais, est utilisé pour déc
 
 Dans notre projet, nous utilisons le modèle ETL pour nous aider à développer et intégrer front-end et back-end.
 
+<img src="etl_etl.png" alt="image-20200821094949928" style="zoom:80%;" />
 
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le modèle ETL adapté</div></center>
 
 <div style="page-break-after: always;"></div>
 
@@ -340,7 +346,7 @@ Nous divisons le projet ETL en les parties suivantes pour organiser l'exécution
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les tâches détaillées de projet ETL</div></center>
 
-Le développement de chaque étape est divisé en deux étapes : l'pprentissage et le codage.
+Le développement de chaque étape est divisé en deux étapes : l'apprentissage et le codage.
 
 <div style="page-break-after: always;"></div>
 
@@ -519,15 +525,21 @@ Les données normalisées stockées dans la base de données Cassandra après no
 
 ### Consolidation
 
-Cette étape est à mapper tous les données normalisées avec le SQL Server qui s'occupe des utilisateurs.
+Cette étape consiste à mapper toutes les données normalisées avec les données relatives à l'utilisateur dans SQL Server.
 
-Nous devons également générer des données utilisateur virtuelles pour les tests.
+Nous devons également générer des données fictives pour utilisateur et les services. Cela est lié aux cinq tables de SQL Server, elles sont `dbo.account`, `dbo.calling_access`, `dbo.invoice`, `dbo.billed_invoice_status` et `dbo.subscription`.
 
 ![image-20200820182425501](data_gen_sqlserver.png)
 
-<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données liées aux utilisateurs dans SQL Server</div></center>
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le console indiquant les cinq tables générées</div></center>
+
+La figure suivante montre que les données générées ont été correctement stockées dans SQL Server.
 
 <img src="sql_account.png" alt="sql_account" style="zoom:75%;" />
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données de table dbo.account dans SQL Server</div></center>
+
+On compare la référence des données en noramlisation avec la référence des données générées dans SQL Server pour confirmer si les deux données correspondent. Si elles correspondent, les données sont intégrées dans un nouveau type de données `edr_consolidated` et enregistrées dans Cassandra.
 
 On peut voir dans la figure ci-dessous que nos données consolidées ont été affichées avec succès dans Cassandra.
 
@@ -539,20 +551,25 @@ On peut voir dans la figure ci-dessous que nos données consolidées ont été a
 
 ### Kafka
 
+En tant que niveau de message distribué, kafka peut effectivement aider à améliorer la robustesse de la propagation des messages du système.
+
+
+Afin de surveiller le log dans la phase de consolidation, nous avons introduit `KafkaHandler` dans le projet pour obtenir les données de la sortie du log par la consolidation. Pour ce faire, nous réécrivons le fichier `applog.py` dans` billing-labs-shared-utils` partagé par spikeelabs comme suit. 
+
 ```python 
 def configure(component_name, component_instance_id=None, is_threaded=False, requestid_formatter=None):
     # ... code ... #
 	mylogger = logging.getLogger()
-    kh = KafkaHandler()  
+	kh = KafkaHandler()  
 	formatter = CustomJsonFormatter('(@timestamp) (levelname) (component_name) (inst_id) (name) (message)')
 	kh.setFormatter(formatter)
 	mylogger.addHandler(kh)
     # ... code ... #
 ```
 
+Afin de surveiller le log de la phase de consolidation, nous avons introduit `KafkaHandler` dans le projet pour obtenir des données à partir de la sortie de la consolidation.
 
-
-Grâce à fast-data-dev, nous pouvons facilement obtenir une interface utilisateur sur `http://localhost:3030`.
+Grâce à fast-data-dev, nous pouvons facilement obtenir une interface utilisateur sur `http://localhost:3030`. Les données obtenues en modifiant le `applog.py` et en surveillant le log peuvent être affichées comme suit. Ces données peuvent être enregistrées dans plusieurs sauvegardes dans Kafka pour assurer la redondance des données.
 
 ![image-20200820163953277](iot_kafka.png)
 

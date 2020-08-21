@@ -208,11 +208,23 @@ normaliser les données
 
 mapper tous les données normalisées avec le serveur sql qui s'occupe des utilisateurs
 
+
+
+
+
 <div style="page-break-after: always;"></div>
 
 ### 3.3 Kafka
 
 écouteur pour capturer les données
+
+作为一个分布式的消息队列，kafka能够有效地帮助提高整个系统的稳健性。
+
+为了实现对consolidation阶段的log的监听，我们在项目中引入了`KafkaHandler`来实现对consolidation的返回结果log的数据获取。为此我们在属于spikeelabs共享的`billing-labs-shared-utils`中的`applog.py`文件进行如下改写。
+
+
+
+成果获取到的数据之后我们还能通过BigData进行一些分析，以下是BigData数据分析的一些实例。
 
 <div style="page-break-after: always;"></div>
 

@@ -208,9 +208,17 @@ normaliser les données
 
 mapper tous les données normalisées avec le serveur sql qui s'occupe des utilisateurs
 
+根据RabbitMQ/SQL Server/Cassandra之间的关系和用户数据和归一化数据之间的关系，我们有如下的设计。
+
+（图）
+
+tim通过监听RabbitMQ获取需要归一化的文件名，这时normalisation将会对该文件进行处理并把归一化之后的数据存放在Cassandra。
+然后，tim向SQL Server发送请求获取SQL Server中的用户access数据。接着，tim同样向Cassandra发送请求获取归一化处理后的数据。
+这时，microservice Conso可以将用户的access数据和归一化处理后的数据进行匹配，并将符合要求的数据存放到Cassandra中。
 
 
 
+on比对noramlisation之中的数据的referernce和SQL Server中生成的数据的referernce去确认两个数据是否匹配。如果她们匹配,就将数据整合成新的数据类型`edr_consolidated`并被保存在Cassandra里。
 
 <div style="page-break-after: always;"></div>
 
@@ -231,6 +239,9 @@ mapper tous les données normalisées avec le serveur sql qui s'occupe des utili
 ### 3.4 Dashboard
 
 afficher un API pour faciliter les opérations
+
+另外一名大数据的实习生和我一起构建这个数据呈现部分。
+为了实现快速地开发以及获得不错的显示效果，tim采用了Vue框架来实现开发，并采用ElementUI来优化显示。
 
 <div style="page-break-after: always;"></div>
 

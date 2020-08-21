@@ -1,3 +1,5 @@
+
+
 <img src='./couverture.png' alt='Couv-7'>
 
 <br>
@@ -19,7 +21,7 @@
 
 <div style="border-top: 3px ridge #fff"></div>
 
-<div style="margin:1em 4.4em;font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.2em;"><strong>R&D démonstrateur web</strong> : le développement web full-stack d'un flux de travail boutique-logistique-entrepôt et de système IoT</div>
+<div style="margin:1em 3em;font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.2em;"><strong>R&D démonstrateur web</strong> : Conception et développement d’un démonstrateur web d'un flux de travail boutique-logistique-entrepôt et de système IoT</div>
 
 <br>
 
@@ -77,28 +79,30 @@
 
 ## Abstract
 
-Le premier thème de ce stage de fin d'études est sur le développement démonstrateur d'un flux de travail boutique-logistique-entrepôt. Mon travail comprend le développement de pages, la modification d'API et le déploiement de pages Web.
+La première phase de ce stage de fin d'études était consacrée au développement d'un démonstrateur d'un flux de travail boutique-logistique-entrepôt. Le travail comprend le développement de pages, la modification d'API et le déploiement de pages Web.
 
 Dans la partie back, on utilise MongoDB, une base de données distribuée, universelle et basée sur des documents, pour stocker les données fictives générées par un script Python. L'API de ce projet est construite avec Python Flask et Swagger, qui nous permet de récupérer les données persistantes. 
 
 Dans la partie front, on utilise Angular, le framework front-end de Google, pour construire un site web structuré et évolutif. Typescript(un sur-ensemble de Javascript), CSS et HTML sont à la base de la construction d'un composant Angular. Angular Material, une bibliothèque de components UI, est utilisée pour améliorer l'interface utilisateur.
 
-Le deuxième projet du stage consiste à transformer un système de recharge de télécommunications distribué en une solution de gestion de big data distribuée pour les piles de recharge de véhicules électriques On intègre les données des utilisateurs et les données collectées, et publie les données intégrées sur Kafka.
+Le deuxième projet du stage consiste à transformer un système de recharge de télécommunications distribué à une solution de gestion de big data distribuée pour les piles de recharge de véhicules électriques On intègre les données des utilisateurs et les données collectées, et publie les données intégrées sur Kafka.
 
-Le logiciel Git est utilisé pour la synchronisation de projet avec le dépôt Git distant. Lse fronts et les backs sont connectés avec la structure JSON. Docker et docker-compose sont utilisés pour le déploiement de nos logiciels microservices à une machine Linux.
+Le logiciel Git est utilisé pour la synchronisation de projet avec le dépôt Git distant. Le front et le back se communiquent en JSON. Docker et docker-compose sont utilisés pour le déploiement des microservices sur une machine Linux.
 
 
 
 <div style="page-break-after: always;"></div>
 ## Introduction
 
-Ce rapport explique mon stage de six mois chez SpikeeLabs à Rennes. SpikeeLabs est une entreprise qui propose à ses clients les concepts et les réalisations des systèmes de service d'information. J'ai participé au stage dans le département BillingLabs de l'entreprise, le but étant de réaliser la fonction et l'affichage de l'ensemble du processus du système de service, y compris API, Analytics et IHM.
+Ce rapport est une présentation de mon stage de six mois chez SpikeeLabs à Rennes. SpikeeLabs est une entreprise qui propose à ses clients les concepts et les réalisations des systèmes de service d'information. 
+
+ J'ai travaillé sur la solution BillingLabs de l'entreprise, le but étant de réaliser la fonction et l'affichage de l'ensemble du processus du système de service, y compris API, Analytics et IHM.
 
 
 
 ### Contexte
 
-Mes projets de stage se compose de deux parties: le but des deux projets est de migrer le projet original de l'entreprise vers la nouvelle scène pour la réalisation, afin que notre fonction d'origine puisse être itérée, mise à jour et étendue dans la nouvelle scène. 
+Mon stage se compose de deux projets: le but des deux projets est de migrer le projet original de l'entreprise vers la nouvelle scène pour la réalisation, afin que notre fonction d'origine puisse être itérée, mise à jour et étendue dans la nouvelle scène. 
 
 Le premier projet est un système de gestion des télécommunications basé sur l'entreprise. Nous espérons migrer le système vers le scénario entrepôt-logistique-magasin pour construire un système de gestion ETL entrepôt-logistique-magasin.
 
@@ -116,7 +120,7 @@ Le but de mon stage est de fournir un soutien aux entreprises dans le processus 
 
 ###  À propos de SpikeeLabs
 
-Spikeelabs est immatriculée en 2016. C’est une entreprise ESN basée à Rennes mais sert pour les client autour de la France. Depuis sa création, SpikeeLabs connaît une forte croissance tant en termes de chiffre d’affaires. 
+Spikeelabs est immatriculée en 2016. C’est une entreprise ESN basée à Rennes mais sert pour les client autour de la France. Depuis sa création, SpikeeLabs connaît une forte croissance en termes de chiffre d’affaires. 
 
 
 
@@ -280,7 +284,7 @@ Plus d'informations sur Docker peuvent être trouvées ici : https://www.docker.
 
 ### Outils de coopération
 
-Bien que le projet de stage soit un projet personnel, je suis également entré en contact avec de nombreux outils de projets collaboratifs dans l'entreprise, tels que GitLab, Teams, Trello et One Drive.
+Bien que le projet de stage soit un projet personnel, , j’ai utilisé également de nombreux outils de projets collaboratifs dans l'entreprise, tels que GitLab, Teams, Trello et One Drive.
 
 #### GitLab
 
@@ -292,7 +296,7 @@ Il fournit également un contrôle d'accès et plusieurs fonctionnalités de col
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les projets ETL dans le Git de SpikeeLabs</div></center>
 
-Contrairement à GitHub, GitLab nous permet de créer gratuitement un entrepôt privé et de le déployer sur notre propre serveur. De plus, il intègre également des fonctions telles que CI (Continuous Integration).
+GitLab intègre  également des fonctions telles que CI (Continuous  Integration).
 
 #### Teams
 
@@ -354,7 +358,7 @@ Le développement de chaque étape est divisé en deux étapes : l'apprentissage
 
 Voici un organigramme de notre projet de gestion logistique. Il s'agit notamment de magasin (CBR-Y2), de réseau logistique (ORLIWEB) et d'entrepôt (WES HABILLEMENT). 
 
-![image-20200630104842503](organigram.png)
+<img src="organigram.png" alt="image-20200630104842503" style="zoom:110%;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'organigramme du projet ETL</div></center>
 
@@ -368,11 +372,11 @@ Selon cet organigramme, nous pouvons obtenir la relation entre différents flux 
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les flux dans le système ETL</div></center>
 
-Nous pouvons diviser ces flux en quatre catégories, à savoir `Catalogue`, `Commande`, `Retours` et `Synchro`.
+Nous pouvons diviser ces flux en quatre catégories, à savoir `Catalog`, `Commande`, `Returns` et `Synchro`.
 
-![image-20200820162816611](4flux.png)
+![image-20200821111609848](4cats.png)
 
-<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les quatre catégories de flux dans l'Angular </div></center>
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les quatre catégories de flux </div></center>
 
 Dans cette partie, nous avons terminé l'opération de génération de données de simulation. Nous avons spécifiquement utilisé Python comme langage pour générer des scripts et nous nous sommes connectés à la base de données MongoDB pour implémenter l'insertion de documents. Nous utilisons également JSON comme type de données pour réaliser une communication sans état entre les API.
 
@@ -410,21 +414,21 @@ Angular est un framework côté client open source de Google, basé sur TypeScri
 
 Angular est utilisé pour faire beaucoup de conception fonctionnelle. Par exemple, nous pouvons ajouter une zone de recherche pour filtrer les résultats EAN, ou nous pouvons ajouter des informations supplémentaires sur le timeline.
 
-Ici en ci-dessous on présente les filtres qu'on a créés. Selon différents besoins, on peut filtrer la référence de la commande, la référence de la boutique, le code barre EAN, la date de la commande, la date d'intégration de la commande, le nom du fichier, la source de la commande, la destination de la commande, la catégorie de la commande et la version de protocole.
+On présente ci-dessous les filtres qu'on a créé. Selon les différents besoins, on peut filtrer la référence de la commande, la référence de la boutique, le code barre EAN, la date de la commande, la date d'intégration de la commande, le nom du fichier, la source de la commande, la destination de la commande, la catégorie de la commande et la version de protocole.
 
-![image-20200630102842875](Filters.png)
+<img src="Filters.png" alt="image-20200630102842875" style="border: dashed 1px; border-radius: 20px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les filtres pour filtrer les commandes</div></center>
 
 Le test d'une page peut être effectué. On précise que la référence de la commande commence par "IAS" et la commande passe de "boutique" à "ERP" (insensible à la casse). La date de la commande est fixée au 13/03/2019.
 
-![Filtre_chercher2](Filtre_chercher2.png)
+<img src="Filtre_chercher2.png" alt="Filtre_chercher2" style=" border: dashed 1px; border-radius: 20px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les commandes filtrées</div></center>
 
 De plus, lorsque nous cliquons sur une page, celle-ci doit pouvoir afficher les informations détaillées de la commande et toutes les commandes qui y sont liées dans le même workflow.  Ces commandes forment le timeline.
 
-![Annotation 2020-07-02 183127](timeline.png)
+<img src="timeline.png" alt="Annotation 2020-07-02 183127" style=" border: dashed 1px; border-radius: 20px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le timeline est affiché dans la page détail</div></center>
 
@@ -432,7 +436,7 @@ De plus, lorsque nous cliquons sur une page, celle-ci doit pouvoir afficher les 
 
 Lors de la génération de données, nous avons également généré certains types de données qui indiquent des erreurs pour identifier les problèmes pouvant survenir pendant le processus de commande, tels que des erreurs d'inventaire, des erreurs de transaction ou des erreurs de format.
 
-<img src="order_list_timeline_error.png" alt="order_list_timeline_error" style="" />
+<img src="order_list_timeline_error.png" alt="order_list_timeline_error" style=" border: dashed 1px; border-radius: 20px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Une commande erronée</div></center>
 
@@ -446,17 +450,37 @@ Les tests unitaires sont utilisés pour détecter si le projet peut fonctionner 
 
 Dans notre projet, nous testons l'API et le front-end. Parce que notre backend utilise le langage Python, nous avons choisi la bibliothèque unittest, une bibliothèque très couramment utilisée pour écrire des tests unitaires en Python, pour nous aider à implémenter le processus de test unitaire.
 
+```python
+    # test count_files without param
+    def test_count_files_none(self)
+    
+    # test count_files with param
+    def test_count_files_param(self)
 
+    # test search_files without param
+    def test_search_files_none(self)
 
-![API Testing](testunit.png)
+    # test search_files with param
+    def test_search_files_param(self)
+    
+    # test count_orders without param
+    def test_count_orders_none(self)
 
-<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Tests unitaires pour count_files</div></center>
+    # test count_orders with param
+    def test_count_orders_param(self)
 
+    # test search_orders without param
+    def test_search_orders_none(self)
 
+    # test search_orders with param
+    def test_search_orders_param(self)
+```
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les fonctions de test </div></center>
 
 Ce qui suit est le résultat de notre test unitaire, ce qui signifie que notre projet a réussi le test unitaire.
 
-![unit_test](unit_test.png)
+<img src="unit_test.png" alt="unit_test" style=" border: dashed 1px; border-radius: 5px;" />
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'affichage dans le console des tests unitaires </div></center>
 
@@ -465,13 +489,13 @@ Ce qui suit est le résultat de notre test unitaire, ce qui signifie que notre p
 <div style="page-break-after: always;"></div>
 ### Déploiement en Docker
 
-Après avoir terminé la conception front-end et back-end, notre projet peut s'exécuter normalement en local de VM. Mais si nous voulons déployer le projet afin que le projet puisse toujours fournir des services et être plus facilement accessible, nous devons utiliser Docker.
+Après avoir terminé la conception front-end et back-end, notre projet peut s'exécuter normalement en local de VM. 
 
 ![image-20200630102653449](deploydocker1.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les services sont stockées dans des conteneurs docker</div></center>
 
-
+Mais si nous voulons déployer le projet afin que le projet puisse toujours fournir des services et être plus facilement accessible, nous devons utiliser Docker.
 
 
 
@@ -481,7 +505,9 @@ Après avoir terminé la conception front-end et back-end, notre projet peut s'e
 
 ### Organisation
 
-Dans notre projet IoT, nous commencerons par l'étape uS Collecte (nous utilisons les données générées à la place) .Les données entrantes dans différents formats seront intégrées en normaliastion dans un format unifié et stockées dans Cassandra. 
+Dans notre projet IoT, nous commencerons par l'étape uS Collecte (nous utilisons les données générées à la place) .
+
+Les données entrantes dans différents formats seront intégrées en normaliastion dans un format unifié et stockées dans Cassandra. 
 
 <img src="IOT_arch.png" alt="image-20200820164412931"  />
 
@@ -505,21 +531,48 @@ Tout comme ce que nous avons fait dans le projet ETL, nous pouvons diviser le pr
 
 ### Normalisation
 
-À l'étape Normalisation, ce que nous devons faire est de traiter les données brutes collectées, afin que nous puissions obtenir les données de trois formats de fichiers différents (JSON, CSV et XML) à un format unifié. Les données normalisées sont transférées à l'étape suivante, la consolidation.
+À l'étape Normalisation, ce que nous devons faire est de traiter les données brutes collectées, afin que nous puissions obtenir les données de trois formats de fichiers différents (JSON, CSV et XML) à un format unifié. 
+
+![image-20200821115239997](principle_norm.png)
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le principe du microservice normalisation</div></center>
+
+Les données normalisées seront transférées à l'étape suivante, la consolidation.
 
 Voici comment la même donnée est représentée dans trois formats différents.
 
-![image-20200820234922018](3donnees.png)
+```csv
+DeviceId,ArrivalTime,DepartureTime
+"18,773",04/11/2017 07:24:35 AM,04/11/2017 07:30:00 AM
+```
 
-<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les trois formats de données : CSV, JSON, XML</div></center>
+```json
+{
+		"DeviceId": "18,773",
+		"ArrivalTime": "04/11/2017 07:24:35 AM",
+		"DepartureTime": "04/11/2017 07:30:00 AM",
+}
+```
 
-Comme données de simulation, nous avons utilisé "On-street Car Parking Sensor Data-2017", les données de détection des places de stationnement de la ville de Melbourne dans la zone CBD en 2017. Il enregistre l'ID du capteur, l'heure d'arrivée de la voiture, l'heure de départ de la voiture, la durée du séjour, les panneaux de signalisation, l'emplacement géographique et d'autres données.
+```xml
+<row>
+	<deviceid>18773</deviceid>
+	<arrivaltime>2017-04-11T07:24:35</arrivaltime>
+	<departuretime>2017-04-11T07:30:00</departuretime>
+</row>
+```
 
-Les données normalisées stockées dans la base de données Cassandra après normalisation sont les suivantes.
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Une exemple des trois formats de données : CSV, JSON, XML</div></center>
+
+Comme données de simulation, nous avons utilisé _On-street Car Parking Sensor Data-2017_, les données de détection des places de stationnement de la ville de Melbourne dans la zone CBD en 2017. 
+
+Il enregistre l'ID du capteur, l'heure d'arrivée de la voiture, l'heure de départ de la voiture, la durée du séjour, les panneaux de signalisation, l'emplacement géographique et d'autres données.
 
 ![image-20200820163649139](normalisation.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données normalisées sont stockées dans Cassandra</div></center>
+
+Les données normalisées stockées dans la base de données Cassandra après normalisation sont présentées ci-dessus.
 
 <div style="page-break-after: always;"></div>
 
@@ -527,7 +580,19 @@ Les données normalisées stockées dans la base de données Cassandra après no
 
 Cette étape consiste à mapper toutes les données normalisées avec les données relatives à l'utilisateur dans SQL Server.
 
-Nous devons également générer des données fictives pour utilisateur et les services. Cela est lié aux cinq tables de SQL Server, elles sont `dbo.account`, `dbo.calling_access`, `dbo.invoice`, `dbo.billed_invoice_status` et `dbo.subscription`.
+Selon la relation entre RabbitMQ, SQL Server et Cassandra et la relation entre les données utilisateur et les données normalisées, nous avons la conception suivante.
+
+![image-20200821104541746](principle_conso.png)
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Le principe du microservice condolidation</div></center>
+
+On obtient le nom de fichier qui doit être normalisé en surveillant RabbitMQ. À ce stade, la normalisation traitera le fichier et stockera les données normalisées dans Cassandra.
+
+Ensuite, on envoie une demande à SQL Server pour obtenir des données d'accès utilisateur dans SQL Server. On envoie également une demande à Cassandra pour obtenir les données normalisées.
+
+Le microservice consolidation peut faire correspondre les données d'accès de l'utilisateur avec les données normalisées et stocker les données qui répondent aux exigences de consolidation dans Cassandra.
+
+Afin de simuler le processus ci-dessus, on génère des données fictives pour utilisateur et les services. Cela est lié aux cinq tables de SQL Server, elles sont `dbo.account`, `dbo.calling_access`, `dbo.invoice`, `dbo.billed_invoice_status` et `dbo.subscription`.
 
 ![image-20200820182425501](data_gen_sqlserver.png)
 
@@ -539,13 +604,15 @@ La figure suivante montre que les données générées ont été correctement st
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données de table dbo.account dans SQL Server</div></center>
 
-On compare la référence des données en noramlisation avec la référence des données générées dans SQL Server pour confirmer si les deux données correspondent. Si elles correspondent, les données sont intégrées dans un nouveau type de données `edr_consolidated` et enregistrées dans Cassandra.
+On compare la référence des données en noramlisation avec la référence des données générées dans SQL Server pour confirmer si les deux données correspondent. 
 
-On peut voir dans la figure ci-dessous que nos données consolidées ont été affichées avec succès dans Cassandra.
+Si elles correspondent, les données sont intégrées dans un nouveau type de données `edr_consolidated` et enregistrées dans Cassandra.
 
 ![image-20200820163801538](consolidated.png)
 
 <center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les données consolidées sont stockées dans Cassandra</div></center>
+
+On peut voir dans la figure ci-dessus que nos données consolidées ont été affichées avec succès dans Cassandra.
 
 <div style="page-break-after: always;"></div>
 
@@ -569,29 +636,63 @@ def configure(component_name, component_instance_id=None, is_threaded=False, req
 
 Afin de surveiller le log de la phase de consolidation, nous avons introduit `KafkaHandler` dans le projet pour obtenir des données à partir de la sortie de la consolidation.
 
-Grâce à fast-data-dev, nous pouvons facilement obtenir une interface utilisateur sur `http://localhost:3030`. Les données obtenues en modifiant le `applog.py` et en surveillant le log peuvent être affichées comme suit. Ces données peuvent être enregistrées dans plusieurs sauvegardes dans Kafka pour assurer la redondance des données.
+Grâce à fast-data-dev, nous pouvons facilement obtenir une interface utilisateur sur `http://localhost:3030`. Les données obtenues en modifiant le `applog.py` et en surveillant le log peuvent être affichées comme suit. 
 
 ![image-20200820163953277](iot_kafka.png)
+
+Ces données peuvent être enregistrées dans plusieurs sauvegardes dans Kafka pour assurer la redondance des données.
 
 <div style="page-break-after: always;"></div>
 
 ### Dashboard
 
-afficher un API pour faciliter les opérations
+Un autre stagiaire Big Data et moi avons construit cette partie de démonstrateur de données.
 
-<img src="dashboard.png" alt="dashboard" style="zoom:80%;" />
+Afin de réaliser un développement rapide et d'obtenir un bon effet d'affichage, on utilise le framework Vue pour réaliser le développement et utilise Element UI pour améloirer l'affichage. Les pages développées avec Element UI peuvent s'adapter à l'esthétique moderne, et il existe de nombreux composants pour Element UI.
 
-<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'interface Homme-Machine de projet IoT pour faire des demandes vers serveur</div></center>
+Selon nos exigences en matière d'API back-end, on doit fournir des interfaces côté Web pour les trois processus BigData / MachinLearning. On a donc conçu le routage suivant.
 
-<img src="IHM_FraudDetection.png" alt="IHM_FraudDetection" style="zoom:80%;" />
+<img src="router.png" alt="router"  />
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">La conception de routeur en Vue</div></center>
+
+Afin de réaliser la communication entre la page front-end et la file d'attente de messages de Kafka, nous utilisons Axios pour partage des ressources entre origines multiples.
+
+```javascript
+axios(config).then((response) => {
+    this.msg = response.data['Message'] + ' with status code ' + response.data['Status Code'];
+    console.log(JSON.stringify(response.data));
+}).catch((error)=>{
+    this.msg = error;
+    console.log(error);
+});
+```
+
+Cela nous permet de faire des demandes de ressources interdomaines et de renvoyer un objet Promise en JavaScript pour indiquer que la ressource que nous avons demandée sera renvoyée de manière asynchrone.
 
 <div style="page-break-after: always;"></div>
 
-### Déploiement en Docker
+Après avoir obtenu les données de Kafka, nous pouvons tester sur la page front.
 
-Déployer le projet en docker
+<img src="dashboard.png" alt="dashboard" style="zoom:80%; border: dashed 2px; border-radius: 20px;" />
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'IHM pour faire des demandes Big Data vers serveur avec pop-up message</div></center>
+
+
+
+<img src="IHM_FraudDetection.png" alt="IHM_FraudDetection" style="zoom:80%; border: dashed 2px; border-radius: 20px;" />
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">L'interface pour le Fraud Detection</div></center>
 
 <div style="page-break-after: always;"></div>
+
+Nous pouvons faire des demandes de big data sur la page et obtenir des analyses statistiques, telles que distplot, heatmap, etc.
+
+![image-20200821121107739](bigdata.png)
+
+<center><div style="color:orange; border-bottom: 1px solid #d9d9d9;     display: inline-block;     color: #999;     padding: 2px;">Les analytics Big Data avec nos données venant de Kafka</div></center>
+
+
 
 <div style="page-break-after: always;"></div>
 
@@ -617,3 +718,4 @@ Tous ces éléments ont apporté un soutien conceptuel plus riche à la gestion 
 - lensesio/kafka-cheat-sheet : https://github.com/lensesio/kafka-cheat-sheet
 - Docker docs : https://docs.docker.com/get-docker/
 - On-street Car Parking Sensor Data - 2017 : https://data.melbourne.vic.gov.au/Transport/On-street-Car-Parking-Sensor-Data-2017/u9sa-j86i
+- Cross-origin resource sharing (CORS) : https://developer.mozilla.org/fr/docs/Web/HTTP/CORS
